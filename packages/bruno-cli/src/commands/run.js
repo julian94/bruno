@@ -387,6 +387,7 @@ const handler = async function (argv) {
         summary,
         results
       };
+      // Here's where the junit stuff probably should go in.
 
       fs.writeFileSync(outputPath, JSON.stringify(outputJson, null, 2));
       console.log(chalk.dim(chalk.grey(`Wrote results to ${outputPath}`)));
