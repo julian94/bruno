@@ -190,6 +190,9 @@ const runSingleRequest = async function (
       } else {
         console.log(chalk.red(stripExtension(filename)) + chalk.dim(` (${err.message})`));
         return {
+          test: {
+            filename: filename,
+          },
           request: {
             method: request.method,
             url: request.url,
@@ -306,6 +309,9 @@ const runSingleRequest = async function (
     }
 
     return {
+      test: {
+        filename: filename,
+      },
       request: {
         method: request.method,
         url: request.url,
@@ -326,6 +332,9 @@ const runSingleRequest = async function (
   } catch (err) {
     console.log(chalk.red(stripExtension(filename)) + chalk.dim(` (${err.message})`));
     return {
+      test: {
+        filename: filename,
+      },
       request: {
         method: null,
         url: null,
